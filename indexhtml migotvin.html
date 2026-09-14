@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>MigotVin WiFi Hotspot</title>
+<link rel="stylesheet" href="tailwind.css">
+<script src="tailwind.js"></script>
+<script src="sweetalert2js.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-sans antialiased text-gray-900">
+
+    <!-- Sticky Header -->
+    <header class="bg-indigo-900 text-white fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and title area -->
+                <div class="flex items-center">
+                    <img src="logo.png" alt="Your Company Logo" class="h-8 w-8 mr-2">
+                    <h1 class="text-xl font-bold">MigotVin</h1>
+                </div>
+                <!-- Navigation Links and Contact Number -->
+                <div class="block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#alreadyHavePackage" class="text-indigo-200 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Already Paid? Click Here.</a>
+                        <span class="text-indigo-200">+254756888111</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main content -->
+    <main class="pt-24">
+        <section class="bg-white">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Fast,Cheap and Reliable Wifi</h2>
+                <!-- Pricing Section -->
+                <div class="mt-10">
+                    <div class="text-center">
+                        <h3 class="text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl sm:leading-9">
+                            CHECK OUR PRICING
+                        </h3>
+                        <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
+                            Choose a plan that fits your needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<div class="mt-10 max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-5" id="pkgGrid">
+    <div class="plan-card-wrap plan-sched-wrap flex flex-col rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105" data-category="hourly">
+        <div class="px-4 py-5 bg-gradient-to-tr from-blue-50 to-blue-200 text-center">
+            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-800 text-blue-50">
+1 Hr Unlimited Plan
+            </span>
+            <div class="mt-4 text-4xl leading-none font-extrabold text-blue-800">
+                <span class="text-lg font-medium text-blue-600">ksh</span>
+10
+            </div>
+            <p class="mt-2 text-md leading-5 text-blue-700 text-center">1 Hrs Unlimited</p>
+        </div>
+        <div class="px-4 pt-4 pb-6 bg-blue-500 text-center">
+            <a href="javascript:void(0)" class="inline-block text-blue-800 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transform transition duration-150 ease-in-out rounded-lg font-semibold px-3 py-2 text-xs shadow-lg cursor-pointer"
+               onclick="handlePhoneNumberSubmission(this.getAttribute('data-plan-id'), this.getAttribute('data-router-id'));" data-plan-id="55" data-router-id="10">
+                Click Here To Connect
+            </a>
+        </div>
+    </div>
+    <div class="plan-card-wrap plan-sched-wrap flex flex-col rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105" data-category="hourly">
+        <div class="px-4 py-5 bg-gradient-to-tr from-blue-50 to-blue-200 text-center">
+            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-800 text-blue-50">
+3 Hrs Unlimited Plan
+            </span>
+            <div class="mt-4 text-4xl leading-none font-extrabold text-blue-800">
+                <span class="text-lg font-medium text-blue-600">ksh</span>
+20
+            </div>
+            <p class="mt-2 text-md leading-5 text-blue-700 text-center">20 Hrs Unlimited</p>
+        </div>
+        <div class="px-4 pt-4 pb-6 bg-blue-500 text-center">
+            <a href="javascript:void(0)" class="inline-block text-blue-800 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transform transition duration-150 ease-in-out rounded-lg font-semibold px-3 py-2 text-xs shadow-lg cursor-pointer"
+               onclick="handlePhoneNumberSubmission(this.getAttribute('data-plan-id'), this.getAttribute('data-router-id'));" data-plan-id="56" data-router-id="10">
+                Click Here To Connect
+            </a>
+        </div>
+    </div>
+    <div class="plan-card-wrap plan-sched-wrap flex flex-col rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105" data-category="hourly">
+        <div class="px-4 py-5 bg-gradient-to-tr from-blue-50 to-blue-200 text-center">
+            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-800 text-blue-50">
+5 Hrs Unlimited Plan
+            </span>
+            <div class="mt-4 text-4xl leading-none font-extrabold text-blue-800">
+                <span class="text-lg font-medium text-blue-600">ksh</span>
+25
+            </div>
+            <p class="mt-2 text-md leading-5 text-blue-700 text-center">5 Hrs Unlimited</p>
+        </div>
+        <div class="px-4 pt-4 pb-6 bg-blue-500 text-center">
+            <a href="javascript:void(0)" class="inline-block text-blue-800 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transform transition duration-150 ease-in-out rounded-lg font-semibold px-3 py-2 text-xs shadow-lg cursor-pointer"
+               onclick="handlePhoneNumberSubmission(this.getAttribute('data-plan-id'), this.getAttribute('data-router-id'));" data-plan-id="57" data-router-id="10">
+                Click Here To Connect
+            </a>
+        </div>
+    </div>
+    <div class="plan-card-wrap plan-sched-wrap flex flex-col rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105" data-category="hourly">
+        <div class="px-4 py-5 bg-gradient-to-tr from-blue-50 to-blue-200 text-center">
+            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-800 text-blue-50">
+12 Hrs Unlimited Plan
+            </span>
+            <div class="mt-4 text-4xl leading-none font-extrabold text-blue-800">
+                <span class="text-lg font-medium text-blue-600">ksh</span>
+30
+            </div>
+            <p class="mt-2 text-md leading-5 text-blue-700 text-center">12 Hrs Unlimited</p>
+        </div>
+        <div class="px-4 pt-4 pb-6 bg-blue-500 text-center">
+            <a href="javascript:void(0)" class="inline-block text-blue-800 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transform transition duration-150 ease-in-out rounded-lg font-semibold px-3 py-2 text-xs shadow-lg cursor-pointer"
+               onclick="handlePhoneNumberSubmission(this.getAttribute('data-plan-id'), this.getAttribute('data-router-id'));" data-plan-id="58" data-router-id="10">
+                Click Here To Connect
+            </a>
+        </div>
+    </div>
+    <div class="plan-card-wrap plan-sched-wrap flex flex-col rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105" data-category="hourly">
+        <div class="px-4 py-5 bg-gradient-to-tr from-blue-50 to-blue-200 text-center">
+            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-800 text-blue-50">
+24 Hrs Unlimited Plan
+            </span>
+            <div class="mt-4 text-4xl leading-none font-extrabold text-blue-800">
+                <span class="text-lg font-medium text-blue-600">ksh</span>
+40
+            </div>
+            <p class="mt-2 text-md leading-5 text-blue-700 text-center">24 Hrs Unlimited</p>
+        </div>
+        <div class="px-4 pt-4 pb-6 bg-blue-500 text-center">
+            <a href="javascript:void(0)" class="inline-block text-blue-800 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transform transition duration-150 ease-in-out rounded-lg font-semibold px-3 py-2 text-xs shadow-lg cursor-pointer"
+               onclick="handlePhoneNumberSubmission(this.getAttribute('data-plan-id'), this.getAttribute('data-router-id'));" data-plan-id="59" data-router-id="10">
+                Click Here To Connect
+            </a>
+        </div>
+    </div>
+    <div class="plan-card-wrap plan-sched-wrap flex flex-col rounded-lg shadow-xl overflow-hidden transform transition duration-500 hover:scale-105" data-category="daily">
+        <div class="px-4 py-5 bg-gradient-to-tr from-blue-50 to-blue-200 text-center">
+            <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase bg-blue-800 text-blue-50">
+3 Days Unlimited Plan
+            </span>
+            <div class="mt-4 text-4xl leading-none font-extrabold text-blue-800">
+                <span class="text-lg font-medium text-blue-600">ksh</span>
+99
+            </div>
+            <p class="mt-2 text-md leading-5 text-blue-700 text-center">3 Days Unlimited</p>
+        </div>
+        <div class="px-4 pt-4 pb-6 bg-blue-500 text-center">
+            <a href="javascript:void(0)" class="inline-block text-blue-800 bg-blue-50 hover:bg-blue-100 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transform transition duration-150 ease-in-out rounded-lg font-semibold px-3 py-2 text-xs shadow-lg cursor-pointer"
+               onclick="handlePhoneNumberSubmission(this.getAttribute('data-plan-id'), this.getAttribute('data-router-id'));" data-plan-id="60" data-router-id="10">
+                Click Here To Connect
+            </a>
+        </div>
+    </div>
+</div>
+<!-- TV Binding Section -->
+
+<div class="text-center py-4 px-4">
+  <button type="button" onclick="openTvBinding()" class="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-3 px-7 rounded-xl text-lg focus:outline-none focus:shadow-outline">
+    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+    Connect TV Here
+  </button>
+</div>
+<div id="alreadyHavePackage" class="container mx-auto px-4">
+    <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-lg">
+        <div class="md:flex">
+            <div class="w-full p-5">
+                <div class="text-center">
+                    <h3 class="text-2xl text-gray-900">Already Have an Active Package?</h3>
+                </div>
+                <form id="loginForm" class="form" name="login" action="http://duffy.com/login" method="post" >
+                    <input type="hidden" name="dst" value="http://www.msftconnecttest.com/redirect" />
+                    <input type="hidden" name="popup" value="true" />
+                    <input type="hidden" name="mac" value="D0:C6:37:7F:76:EB" />
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
+                        <input id="usernameInput" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="username" type="text" value="" placeholder="Username">
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                        <input id="passwordInput" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" name="password" type="password" placeholder="******************">
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button id="submitBtn" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                            Click Here To Connect
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mpesa Code Section -->
+<div id="mpesaCodeSection" class="container mx-auto px-4 mt-8">
+    <div class="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-lg">
+        <div class="md:flex">
+            <div class="w-full p-5">
+                <div class="text-center">
+                    <h3 class="text-2xl text-gray-900">Enter Your Mpesa Message</h3>
+                </div>
+                <form id="mpesaCodeForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="mpesa_code">Mpesa Message</label>
+                        <textarea id="mpesaCodeInput" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="mpesa_code" rows="4" placeholder="Enter your full Mpesa message"></textarea>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <button id="mpesaCodeSubmitBtn" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+                            Submit Mpesa Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Voucher Activation Section -->
+<div class="mt-10 text-center">
+    <h3 class="text-2xl font-bold text-gray-900 mb-4">Have a voucher code? Activate your voucher code here</h3>
+    <!-- Activation Form -->
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-5 mb-6">
+        <form id="voucherActivateForm" class="form">
+            <div class="mb-4">
+                <label for="voucherActivateCode" class="block text-gray-700 text-sm font-bold mb-2">Voucher Code</label>
+                <input type="text" id="voucherActivateCode" name="voucher" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., v123456" required>
+            </div>
+            <div class="mb-6">
+                <label for="voucherActivateUsername" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                <input type="text" id="voucherActivateUsername" name="username" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., 254712345678" required>
+            </div>
+            <!-- Hidden MAC Address -->
+            <input type="hidden" name="mac" value="D0:C6:37:7F:76:EB">
+            <!-- Hardcoded Router ID -->
+            <input type="hidden" id="voucherRouterId" name="router_id" value="10">
+            <div class="flex items-center justify-between">
+                <button id="voucherActivateBtn" type="button" class="w-full bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Activate Voucher
+                </button>
+            </div>
+        </form>
+    </div>
+    <!-- Voucher Reconnection Section -->
+    <h3 class="text-2xl font-bold text-gray-900 mb-4">Lost Voucher connection? Reconnect here</h3>
+    <!-- Reconnection Form -->
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-5">
+        <form id="voucherReconnectForm" class="form">
+            <div class="mb-6">
+                <label for="voucherReconnectInput" class="block text-gray-700 text-sm font-bold mb-2">Phone Number or Voucher Code</label>
+                <input type="text" id="voucherReconnectInput" name="input" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., 254712345678 or v123456" required>
+            </div>
+            <!-- Hardcoded Router ID -->
+            <input type="hidden" name="router_id" value="10">
+            <div class="flex items-center justify-between">
+                <button id="voucherReconnectBtn" type="button" class="w-full bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Reconnect
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-center mt-6">
+  <button id="forceReconnectBtn" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+    🛠 Force Reconnection / Troubleshoot
+  </button>
+</div>
+
+
+
+<!-- Add a container to display the MAC address -->
+<div id="macAddressContainer" class="mt-4">
+    <p>Your MAC Address: <span id="macAddressDisplay"></span></p>
+</div>
+
+<!-- Add a script to retrieve and display the MAC address -->
+
+<!-- Footer -->
+<footer class="bg-indigo-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+            <div class="lg:col-span-1">
+                <h2 class="text-sm font-semibold uppercase tracking-wider">
+                    Contact Us
+                </h2>
+                <ul class="mt-4 space-y-4">
+                    <li>
+                       <span class="block">Whatsapp: wa.me/+254756888111</span>
+                    </li>
+                    <li>
+                        <span class="block">Phone: +254756888111</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="lg:col-span-1">
+                <h2 class="text-sm font-semibold uppercase tracking-wider">
+                    Quick Links
+                </h2>
+                <ul class="mt-4 space-y-4">
+                    <li><a href="#" class="hover:underline">About Us</a></li>
+                    <li><a href="#" class="hover:underline">Our Services</a></li>
+                    <li><a href="#" class="hover:underline">FAQ</a></li>
+                    <li><a href="#" class="hover:underline">Support</a></li>
+                </ul>
+            </div>
+            <div class="lg:col-span-1">
+                <h2 class="text-sm font-semibold uppercase tracking-wider">
+                     Follow Us
+                </h2>
+                <div class="mt-4 space-x-4">
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+            <div class="flex space-x-6 md:order-2">
+            </div>
+<p class="mt-8 text-base leading-6 text-gray-400 md:mt-0 md:order-1">
+                &copy; 2026 FreeIspRadius. All rights reserved.
+            </p>
+        </div>
+    </div>
+<div class="fixed bottom-4 right-4 z-50">
+    <a href="tel:+254756888111" class="call-icon bg-indigo-500 hover:bg-indigo-600">
+        &#9742;
+    </a>
+</div>
+</footer>
+<script src="jquery.min.js"></script>
+
+
+
+    <script src="app.js" defer></script>
+</body>
+</html>
